@@ -1,0 +1,50 @@
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 2048k -vcodec libx264 -pix_fmt yuv420p test2048k.mp4
+
+ffmpeg -i dancing_org.mp4 -i test2048k.mp4 -lavfi psnr="stats_file=psnr.log" -f null -
+
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 2048k -vcodec libx264 -pix_fmt yuv420p -nal-hrd cbr test2048k.mp4
+
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 2048k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test2048k.mp4
+
+720p:
+ffmpeg -s 1280x548 -pix_fmt yuv420p -i dancing_org.1280x548.yuv -b:v 512k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test720_512k.mp4
+
+ffmpeg -s 1280x548 -pix_fmt yuv420p -i dancing_org.1280x548.yuv -b:v 1024k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test720_1024k.mp4
+
+ffmpeg -s 1280x548 -pix_fmt yuv420p -i dancing_org.1280x548.yuv -b:v 2048k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test720_2048k.mp4
+
+ffmpeg -s 1280x548 -pix_fmt yuv420p -i dancing_org.1280x548.yuv -b:v 3072k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test720_3072k.mp4
+
+360p:
+
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 96k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test360_96k.mp4
+
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 128k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test360_128k.mp4
+
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 256k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test360_256k.mp4
+
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 384k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test360_384k.mp4
+
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 512k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test360_512k.mp4
+
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 1024k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test360_1024k.mp4
+
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 2048k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test360_2048k.mp4
+
+##
+ffmpeg -s 640x274 -pix_fmt yuv420p -i dancing.640x274.yuv -b:v 649k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test360_649k.mp4
+##
+
+180p:
+
+ffmpeg -s 320x138 -pix_fmt yuv420p -i dancing.320x138.yuv -b:v 64k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test180_64k.mp4
+
+ffmpeg -s 320x138 -pix_fmt yuv420p -i dancing.320x138.yuv -b:v 96k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test180_96k.mp4
+
+ffmpeg -s 320x138 -pix_fmt yuv420p -i dancing.320x138.yuv -b:v 128k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test180_128k.mp4
+
+ffmpeg -s 320x138 -pix_fmt yuv420p -i dancing.320x138.yuv -b:v 256k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test180_256k.mp4
+
+ffmpeg -s 320x138 -pix_fmt yuv420p -i dancing.320x138.yuv -b:v 512k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test180_512k.mp4
+
+ffmpeg -s 320x138 -pix_fmt yuv420p -i dancing.320x138.yuv -b:v 1024k -vcodec libx264 -pix_fmt yuv420p -r 24 -nal-hrd cbr test180_1024k.mp4
